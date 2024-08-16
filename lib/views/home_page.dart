@@ -6,9 +6,9 @@ class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
-  int itemPosition = 0;
 
 class _HomePageState extends State<HomePage> {
+  int itemPosition = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +22,12 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            UserAccountsDrawerHeader(
-              accountName: const Text('Régis'),
-              accountEmail: const Text('regisanjos@hotmail.com'),
+            const UserAccountsDrawerHeader(
+              accountName: Text('Régis'),
+              accountEmail: Text('regisanjos@hotmail.com'),
               currentAccountPicture: CircleAvatar(
                 backgroundImage: NetworkImage(
-                  'https://img.freepik.com/vetores-premium/perfil-de-avatar-de-homem-no-icone-redondo_24640-14046.jpg?w=2000'
+                  'https://img.freepik.com/vetores-premium/perfil-de-avatar-de-homem-no-icone-redondo_24640-14046.jpg?w=2000',
                 ),
               ),
             ),
@@ -45,6 +45,72 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
+      ),
+      body: Row(
+      
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              height: 100,
+              margin: const EdgeInsets.all(10),
+              child: Center(
+                child: Text(
+                  'Carroulsel',
+                  style: const TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.yellowAccent,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              height: 100,
+              margin: const EdgeInsets.all(10),
+              child: Center(
+                child: Text(
+                  'Carroulsel',
+                  style: const TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.yellowAccent,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              height: 100,
+              margin: const EdgeInsets.all(10),
+              child: Center(
+                child: Text(
+                  'Carroulsel',
+                  style: const TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.yellowAccent,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
